@@ -29,7 +29,7 @@ backend(springboot):
 2.Add the required dependencies i used lambok , jpa , spring devtools , mysqldriver  etc.
 
 3.src/main/java - > there is a application package like com.example.demo using the same package name create four packages like -> models , repository , service and 
- controller.
+   controller.
 
 4. In the package models create the class(table) for the required once like -> login , registration , payment and products.
 
