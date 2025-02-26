@@ -31,7 +31,123 @@ backend(springboot):
 3.src/main/java - > there is a application package like com.example.demo using the same package name create four packages like -> models , repository , service and 
    controller.
 
-4.In the package models create the class(table) for the required once like -> login , registration , payment and products.
+4.In the package models create the class(table) for the required once like -> admin, use, payment and products.
+
+admin code:
+package com.example.demo.models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+public class admin {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+private int id;
+	@Email
+private String email;
+private String password;
+}
+
+
+user code : 
+package com.example.demo.models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+public class user {
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+private String name;
+@Email
+private String email;
+private String password;
+
+}
+
+products code:
+
+package com.example.demo.models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class products {
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+private String productname;
+private String productdescription;
+private int productstock;
+private int price;
+private String src;
+private String category;
+}
+
+payment code:
+
+package com.example.demo.models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class payment {
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.AUTO)
+	    private Long id;
+	    private String cardNumber;
+	    private String expiryDate;
+	    private String cvv;
+	    private double amount;
+}
+
 
 5.In the package repository create a interface for respective tables by extending to crudrepository or jparepository.
 
