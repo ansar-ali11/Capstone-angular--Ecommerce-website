@@ -31,7 +31,7 @@ backend(springboot):
 3.src/main/java - > there is a application package like com.example.demo using the same package name create four packages like -> models , repository , service and 
    controller.
 
-4. In the package models create the class(table) for the required once like -> login , registration , payment and products.
+4.In the package models create the class(table) for the required once like -> login , registration , payment and products.
 
 5.In the package repository create a interface for respective tables by extending to crudrepository or jparepository.
 
