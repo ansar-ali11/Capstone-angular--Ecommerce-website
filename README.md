@@ -6,22 +6,46 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Project Overview:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project is build using Angular , RestApi , springboot  and mysql.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+User intreface:
 
-## Running unit tests
+frontend:
+welcome page -> contains categoriezed products like electronics , clothing  and home appliances.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+login and registration pages -> for user authentication
 
-## Running end-to-end tests
+cart page -> for the list of products added to the cart 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+payment page -> for secure payment of the user.
 
-## Further help
+backend(springboot):
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1.create a spring starter project 
+
+2.Add the required dependencies i used lambok , jpa , spring devtools , mysqldriver  etc.
+
+3.src/main/java - > there is a application package like com.example.demo using the same package name create four packages like -> models , repository , service and 
+ controller.
+
+4. In the package models create the class(table) for the required once like -> login , registration , payment and products.
+
+5.In the package repository create a interface for respective tables by extending to crudrepository or jparepository.
+
+6.In the package service create a class respective service name  for the tables and write the medthods like add,update,delete and getall etc.
+
+7.In the package controller create a class controller with respective models and add the extentions like cross origin , requestmapping , restcontroller etc and add mapping to the methods like getmapping() , postmapping() , putmapping() and deletemapping().
+
+Database :
+
+tables:
+products table
+
+login table
+
+register table
+
+payment table 
