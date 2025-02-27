@@ -1,0 +1,31 @@
+<body class="d-flex align-items-center justify-content-center vh-100 bg-light">
+    <div class="login-container shadow-sm p-5 rounded">
+       
+
+        <h2 class="text-center mb-4 font-weight-bold">Sign-In</h2>
+        
+        <form [formGroup]="formgroup" (ngSubmit)="onsubmit()">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email or mobile phone number</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email" formControlName="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Enter your password" formControlName="password" required>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary w-100" [disabled]="formgroup.invalid">Sign-In</button>
+            </div>
+        </form>
+
+        <div class="text-center">
+            <a routerLink="/forgot-password" class="link-muted">Forgot your password?</a>
+        </div>
+
+        <div class="text-center mt-3">
+            <p class="text-muted">New to our website? <a routerLink="/register" class="link-primary">Create your account</a></p>
+        </div>
+    </div>
+</body>

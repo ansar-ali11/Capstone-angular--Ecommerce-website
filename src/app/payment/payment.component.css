@@ -1,0 +1,40 @@
+/* Custom Styles */
+.card {
+    border-radius: 15px;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+}
+
+.form-label {
+    font-size: 14px;
+}
+
+.btn-outline-primary, .btn-outline-danger, .btn-outline-info, .btn-outline-secondary {
+    font-size: 14px;
+    border-radius: 25px;
+}
+
+.input-group-text {
+    background-color: #f1f1f1;
+    border-right: none;
+}
+
+input.form-control {
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+/* Secure Payment Text */
+footer .text-muted {
+    font-size: 12px;
+}
+
+/* Hover effects for buttons */
+.btn-outline-primary:hover,
+.btn-outline-danger:hover,
+.btn-outline-info:hover,
+.btn-outline-secondary:hover {
+    background-color: #f1f1f1;
+}

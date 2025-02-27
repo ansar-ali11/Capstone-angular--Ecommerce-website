@@ -1,0 +1,261 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #ff6f61, #ff9478);
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-brand span{
+    color: #ffd700;
+}
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    color: #ffd700 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background:  url("https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?t=st=1738341919~exp=1738345519~hmac=fd84b928133b8b23c30f66e05807b90bec973a8a4540cc21f123fc29ed42f681&w=996") no-repeat center;
+    background-size: cover;
+    color: white;
+    padding: 150px 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.product-card {
+    border: none;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    padding: 10px;
+    text-align: center;
+    max-width: 200px;
+    margin: auto;
+    cursor: pointer;
+}
+.product-card:hover {
+    transform: scale(1.05);
+}
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 10px;
+}
+.product-details-image {
+    max-width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6f61;
+    margin-bottom: 5px;
+}
+.btn-sm {
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+.btn-dark {
+    background-color: #333;
+    border: none;
+}
+.btn-dark:hover {
+    background-color: #ff6f61;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: #ff6f61;
+}
+
+
+/* Styling for Banners */
+.banner {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.banner:hover {
+    transform: scale(1.05);
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.banner h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.carousel-inner {
+    padding: 10px;
+}
+
+.carousel-item {
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner {
+        padding: 50px 20px;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #222;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer a:hover {
+    color: #ffcc00;
+}
+
+.footer h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer .social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Newsletter form styling */
+.footer form {
+    margin-top: 20px;
+}
+
+.footer .form-control {
+    width: 60%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #fff;
+}
+
+.footer button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #ffcc00;
+    border: none;
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    background-color: #ffcc00;
+    color: #222;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#backToTop:hover {
+    background-color: #ff9900;
+}
+
+/* Show Back to Top Button on Scroll */
+.show-back-to-top {
+    display: block;
+}
+
+/* Customizing the search bar */
+.navbar .form-control {
+    width: 250px; /* Adjust width */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    padding-left: 15px; /* Add padding for text */
+}
+
+/* Styling the search button */
+.navbar .btn-outline-light {
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+
+

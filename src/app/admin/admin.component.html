@@ -1,0 +1,99 @@
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Admin Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="list-group shadow">
+                    <a href="#" class="list-group-item list-group-item-action active">Add Product</a>
+                    <a href="#" class="list-group-item list-group-item-action">View Products</a>
+                    <a href="#" class="list-group-item list-group-item-action">Manage Orders</a>
+                </div>
+            </div>
+
+            <!-- Add Product Form -->
+            <div class="col-md-9">
+                <div class="card shadow">
+                    <div class="card-header text-white">
+                        <h5 class="card-title mb-0">Add New Product</h5>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="formgroup" (ngSubmit)="onclick()">
+                            <div class="row">
+                                <!-- Product Name -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="productname" class="form-label">Product Name</label>
+                                    <input type="text" class="form-control" id="productname" formControlName="productname" required>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="price" class="form-label">Price</label>
+                                    <input type="number" class="form-control" id="price" formControlName="price" required>
+                                </div>
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="mb-3">
+                                <label for="productdescription" class="form-label">Product Description</label>
+                                <textarea class="form-control" id="productdescription" rows="3" formControlName="productdescription" required></textarea>
+                            </div>
+
+                            <div class="row">
+                                <!-- Stock Quantity -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="productstock" class="form-label">Stock Quantity</label>
+                                    <input type="number" class="form-control" id="productstock" formControlName="productstock" required>
+                                </div>
+
+                                <!-- Category -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="category" class="form-label">Category</label>
+                                    <select class="form-select" id="category" formControlName="category" required>
+                                        <option value="" disabled selected>Select a category</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Clothing">Clothing</option>
+                                        <option value="Accessories">Accessories</option>
+                                        <option value="Home & Kitchen">Home & Kitchen</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Product Image -->
+                            <div class="mb-3">
+                                <label for="src" class="form-label">Product Image URL</label>
+                                <input type="text" class="form-control" id="src" formControlName="src" required>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-success w-100" [disabled]="formgroup.invalid">Add Product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3 mt-4">
+        <p>&copy; 2025 E-Shop Admin. All Rights Reserved.</p>
+    </footer>
+</body>

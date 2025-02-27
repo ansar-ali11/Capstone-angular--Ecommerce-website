@@ -1,0 +1,88 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-4">
+                <!-- Header -->
+                <h3 class="text-center fw-bold mb-4">Secure Payment</h3>
+                <p class="text-center text-muted mb-4">Complete your purchase securely using our trusted payment methods.</p>
+
+                <!-- Payment Form -->
+                <form [formGroup]="paymentForm" (ngSubmit)="makePayment()">
+                    <!-- Card Number -->
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label fw-semibold">Card Number</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-credit-card"></i></span>
+                            <input type="text" id="cardNumber" class="form-control" formControlName="cardNumber"
+                                placeholder="1234 5678 9012 3456" maxlength="16" required>
+                        </div>
+                    </div>
+
+                    <!-- Expiry Date & CVV -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="expiry" class="form-label fw-semibold">Expiry Date</label>
+                            <input type="text" id="expiry" class="form-control" formControlName="expiryDate"
+                                placeholder="MM/YY" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cvv" class="form-label fw-semibold">CVV</label>
+                            <input type="password" id="cvv" class="form-control" formControlName="cvv" maxlength="3"
+                                placeholder="***" required>
+                        </div>
+                    </div>
+
+                    <!-- Amount -->
+                    <div class="mb-3">
+                        <label for="amount" class="form-label fw-semibold">Amount</label>
+                        <div class="input-group">
+                            <span class="input-group-text">₹</span>
+                            <input type="number" id="amount" class="form-control" formControlName="amount"
+                                placeholder="Enter Amount" required>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods Section -->
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Payment Method</label>
+                        <div class="d-flex gap-3">
+                            <button type="button" class="btn btn-primary w-50">
+                                <i class="fab fa-cc-visa"></i> Visa
+                            </button>
+                            <button type="button" class="btn btn-danger w-50">
+                                <i class="fab fa-cc-mastercard"></i> MasterCard
+                            </button>
+                        </div>
+                        <!-- Optional: Add more payment methods -->
+                        <div class="mt-3 d-flex gap-3">
+                            <button type="button" class="btn btn-info w-50">
+                                <i class="fab fa-paypal"></i> PayPal
+                            </button>
+                            <button type="button" class="btn btn-secondary w-50">
+                                <i class="fab fa-apple-pay"></i> Apple Pay
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="terms" required>
+                            <label class="form-check-label" for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">
+                        <i class="fas fa-lock"></i> Pay Now
+                    </button>
+                </form>
+
+                <!-- Secure Payment Notice -->
+                <p class="text-center text-muted mt-3">
+                    <i class="fas fa-shield-alt"></i> 100% Secure Payment | Your information is safe with us.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

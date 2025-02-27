@@ -1,0 +1,90 @@
+/* Body Background */
+body {
+    background-color: #f0f2f5;
+}
+
+/* Main Login Container */
+.login-container {
+    width: 100%;
+    max-width: 380px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+}
+
+
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #f90; /* Amazon yellow color for focus */
+    outline: none;
+}
+
+.btn-primary {
+    background-color: #f90; /* Amazon yellow color */
+    border-color: #f90;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #e68900; /* Darker yellow shade */
+    border-color: #e68900;
+}
+
+.text-center a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link-muted {
+    color: #0066c0;
+}
+
+.link-muted:hover {
+    text-decoration: underline;
+}
+
+.link-primary {
+    color: #0066c0;
+}
+
+.link-primary:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .form-control {
+        font-size: 0.95rem;
+    }
+}
